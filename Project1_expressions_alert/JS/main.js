@@ -26,8 +26,14 @@ document.write(3 / (3 + 3)); //An expression with more complex math
 
 document.write("<br>");
 
-function myFunction() {
+function myFunction() { //Similiar funcations need to point to a specific id or they will override them
     var sentence = "I am learning";
     sentence += " a lot from this book!";
-    document.getElementById("Concatenate").innerHTMl = sentence;
+    document.getElementById("Concatenate").innerHTML = sentence;
+}
+
+function myFunction1() {
+    var sentence = "I am learning";
+    sentence += " a lot from this book!";
+    document.getElementById("Concatenate1").innerHTML = sentence;
 }
