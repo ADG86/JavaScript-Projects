@@ -2,22 +2,56 @@
 <html lang="en">
     <head>
         <meta charset="UTF=8">
-        <script src="JS/main.js"></script>
+        
     </head>
     <body>
         <h2>JavaScript Functions</h2>
 
-        <p>This example calls a function which performs a calculation and returns the result:</p>
-
-        <p id="demo"></p>
+        <p id="demo"></p> <!--This function needs the "defer" attribute added to the <script>-->
 
         <p id="demo1">Click the button to change the text in this paragraph.</p>
 
         <button onclick="myFunction1()">Try it</button>
 
+        <br><br>
+
+        <button id = "Math_addition" onclick="addition_Function()">addition</button>
+
+        <p id="Math_subtraction">subtraction</p>
+
+        <button onclick="subtraction_Function()">subtraction</button>
+
+        <p id="Math_multiply">multiply</p>
+
+        <button onclick="multiply_Function()">multiply</button>
+
+        <p id="Math_division">division</p>
+
+        <button onclick="division_Function()">divide</button>
+
+        <p id="equation_Math">Equation</p>
+
+        <button onclick = "more_Math()">Equation</button>
+
+        <p id="remainder_Math">Remainder</p>
+
+        <button onclick = "modulus_Operator()">Remainder</button>
+
+        <p id="negative_Math">make negative</p>
+
+        <button onclick = "negation_Operator()">make negative</button>
+
         <br>
+        <br>
+        
+        <button onclick = "increase_Math()">Increase</button>
 
-        <button id = "Math" onclick="addition_Function()">Click Here!</button>
+        <p id="increment_Math">Increase</p>
 
+        <button onclick = "decrease_Math()">Decrease</button>
+
+        <p id="decrement_Math">Decrease</p>
+
+        <script src="JS/main.js"></script>
     </body>
 </html>
