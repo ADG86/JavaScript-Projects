@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8" name="viewport" content="width=device-width, intial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./CSS/Slide_show.css">
+        <script src="./JS/Slide_show.js" defer></script> <!--use the "defer" descriptor to ensure that JS loads after the HTML-->
+    </head>
+    <body>
+        <!--Slideshow container-->
+        <div class="slideshow-container">
+
+            <!--Full-width images with number and caption text-->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="./Images/Portland_Spring.jpg" style="width:100%">
+                <div class="text">Portland - Spring</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="./Images/Portland_Summer.jpg" style="width:100%">
+                <div class="text">Portland - Summer</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="./Images/Portland_Fall.jpg" style="width:100%">
+                <div class="text">Portland - Fall</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="./Images/Portland_Winter.jpg" style="width:100%">
+                <div class="text">Portland - Winter</div>
+            </div>
+
+            <!--Next and previos buttons-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!--The dots/circles-->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+
+    </body>
+
+</html>
