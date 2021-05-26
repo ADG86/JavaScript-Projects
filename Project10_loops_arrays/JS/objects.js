@@ -1,4 +1,4 @@
-let car = {
+let car = { //This is defining the "car" variable attributes labeled and the "description" is the function when called by attribute id
     make: "Subaru ",
     model: "Forester ",
     year: "2015 ",
