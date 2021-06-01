@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        
+        <p id="arrow"></p>
+
+        <p id="arrow2"></p>
+
+        <p id="displayCar"></p>
+
+        <p id="displayCar2"></p>
+
+        <script>
+            var example;
+            example = function() {
+                return "Arrow function example coming up...";
+            }
+            document.getElementById("arrow").innerHTML = example();
+
+            var example2;
+            example2 = () => {
+                return "This is the arrow function example";
+            }
+            document.getElementById("arrow2").innerHTML = example2();
+            
+            var car;
+            car = function() {
+                val =  "I like these care brands: ";
+            }
+            document.getElementById("displayCar").innerHTML = car("Subaru, Toyota, Jeep");
+
+            var car2; /*another example of an arrow function with a parameter*/
+            car2 = (val2) => "these are my favorite car brands: " + val2;
+            document.getElementById("displayCar2").innerHTML = car2("Honda, Ford, Nissan");
+
+        </script>
+
+    </body>
+
+</html>

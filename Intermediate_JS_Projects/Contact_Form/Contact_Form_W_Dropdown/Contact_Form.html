@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8">
+        <script src="JS/Contact_Form_JS.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="CSS/Contact_Form_CSS.css">
+    </head>
+    <body>
+        <h3>Contact form using HTML, CSS and JavaScript</h3>
+
+        <form name="contact_form" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Your first name"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Your last name"><br>
+            <label for="agegroup">Age Group:</label><br>
+            <select id="agegroup" name="agegroup">
+                <option value="Your_Age">Your age group</option>
+                <option value="10_or_younger">10 years old or younger</option>
+                <option value="11_25">11 to 25 years old</option>
+                <option value="26_40">26 to 40 years old</option>
+                <option value="41_60">41 to 60 years old</option>
+                <option value="60_+">60 years old or older</option>
+            </select><br><br>
+            
+            <input type="submit" value="Submit">
+          </form> 
+
+    </body>
+</html>
+
+<!--Reference for contact for https://www.w3schools.com/css/css_form.asp-->

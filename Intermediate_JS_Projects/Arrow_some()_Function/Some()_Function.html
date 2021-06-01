@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        
+        <button onclick="myFunction()">button</button>
+
+        <p id="displayAges"></p>
+
+
+        <script>
+            var ages = [2, 10, 18, 20, 13, 15, 30];
+                
+            function checkAge(age) {
+                return age >= 18;
+            }
+
+            function myFunction() {
+                //using the .some() to iterate through the array of ages and display the result.
+                document.getElementById("displayAges").innerHTML = ages.some(checkAge);
+            }
+                //once the function gets to 18 in the array it wont check the rest of the variables in the ages array
+                // as 18 fulfills the function requirement.
+        </script>
+
+    </body>
+
+</html>
