@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>A Timbers Page</title>
-		<meta charset="utf-8">
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
 		<script src="JS/One_Page_Website.js" defer></script>
 	</head>
@@ -16,45 +16,37 @@
 		<main>
 			<div class="row"> <!--images used to open the lightbox-->
 				<div class="column">
-					<img src=".\Images\Timbers\PORGreenandGold.png" alt="Timbers Crest" width="200" height="200" onclick="openModal();currentSlide(1)" class="hover-shadow">
+					<img src=".\Images\Timbers\mls_is_back_champs.jpg" alt="MLS is Back Champions" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 				</div>
 				<div class="column">
-					<img src=".\Images\Timbers\mls_is_back_champs.jpg" alt="MLS is Back Champions" onclick="openModal();currentSlide(2)" class="hover-shadow">
+					<img src=".\Images\Timbers\club_stars.jpg" alt="Club Stars" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 				</div>
 				<div class="column">
-					<img src=".\Images\Timbers\club_stars.jpg" alt="Club Stars" onclick="openModal();currentSlide(3)" class="hover-shadow">
+					<img src=".\Images\Timbers\dos_diegos.jpg" alt="Dos Diegos" style="width: 100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 				</div>
 				<div class="column">
-					<img src=".\Images\Timbers\dos_diegos.webp" alt="Dos Diegos" onclick="openModal();currentSlide(4)" class="hover-shadow">
-				</div>
-				<div class="column">
-					<img src=".\Images\Timbers\williamson.png" alt="Williamson" onclick="openModal();currentSlide(5)" class="hover-shadow">
+					<img src=".\Images\Timbers\williamson.png" alt="Williamson" style="width: 100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 				</div>
 			</div>
 
 			<div id="myModal" class="modal">
 				<span class="close cursor" onclick="closeModal()">&times;</span>
 				<div class="modal-content">
-
 					<div class="mySlides">
-						<div class="numbertext">1 / 5</div>
-						<img src=".\Images\Timbers\PORGreenandGold_wide.png" style="width:100%">
+						<div class="numbertext">1 / 4</div>
+						<img src=".\Images\Timbers\mls_is_back_champs.jpg" style="width:100%">
 					</div>
 					<div class="mySlides">
-						<div class="numbertext">2 / 5</div>
-						<img src=".\Images\Timbers\mls_is_back_champs_wide.jpg" style="width:100%">
+						<div class="numbertext">2 / 4</div>
+						<img src=".\Images\Timbers\club_stars.jpg" style="width:100%">
 					</div>
 					<div class="mySlides">
-						<div class="numbertext">3 / 5</div>
-						<img src=".\Images\Timbers\club_stars_wide.jpg" style="width:100%">
+						<div class="numbertext">3 / 4</div>
+						<img src=".\Images\Timbers\dos_diegos.jpg" style="width:100%">
 					</div>
 					<div class="mySlides">
-						<div class="numbertext">4 / 5</div>
-						<img src=".\Images\Timbers\dos_diegos_wide.webp" style="width:100%">
-					</div>
-					<div class="mySlides">
-						<div class="numbertext">5 / 5</div>
-						<img src=".\Images\Timbers\williamson_wide.png" style="width:100%">
+						<div class="numbertext">4 / 4</div>
+						<img src=".\Images\Timbers\williamson.png" style="width:100%">
 					</div>
 
 					<!--Next/Prev controls-->
@@ -62,29 +54,26 @@
 					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 					<!--Caption text-->
-					<div class="column">
+					<div class="caption-container">
 						<p id="caption"></p>
 					</div>
 
 					<!--Thumbnail image controls-->
+
 					<div class="column">
-						<img class="demo" src="Images/Timbers/PORGreenandGold.png" onclcick="currentSlide(1)" alt="PTFC Crest">
+						<img class="demo cursor" src=".\Images\Timbers\mls_is_back_champs.jpg" style="width:100%" onclick="currentSlide(1)" alt="MLS is Back Tournament Champs">
 					</div>
 
 					<div class="column">
-						<img class="demo" src="Images/Timbers/mls_is_back_champs.jpg" onclcick="currentSlide(2)" alt="Champs">
+						<img class="demo cursor" src=".\Images\Timbers\club_stars.jpg" style="width:100%" onclick="currentSlide(2)" alt="Portland Timbers Club Stars">
 					</div>
 
 					<div class="column">
-						<img class="demo" src="Images/Timbers/club_stars.jpg" onclcick="currentSlide(3)" alt="Club Stars">
+						<img class="demo cursor" src=".\Images\Timbers\dos_diegos.jpg" style="width:100%" onclick="currentSlide(3)" alt="Dos Diegos">
 					</div>
 
 					<div class="column">
-						<img class="demo" src="Images/Timbers/dos_diegos.webp" onclcick="currentSlide(4)" alt="Dos Diegos">
-					</div>
-
-					<div class="column">
-						<img class="demo" src="Images/Timbers/williamson.png" onclcick="currentSlide(5)" alt="Williamson">
+						<img class="demo cursor" src=".\Images\Timbers\williamson.png" style="width:100%" onclick="currentSlide(4)" alt="Future Star - Eryk Williamson">
 					</div>
 				</div>
 			</div>
