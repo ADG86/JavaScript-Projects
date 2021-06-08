@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>A Timbers Page</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./CSS/one_page_website.css">
+		<script src="JS/One_Page_Website.js" defer></script>
+	</head>
+	<body>
+	
+		<header>
+			<h1>The Portland Timbers Football Club</h1>
+			<p>The Portland Timbers are the "MLS is Back" tournament champions</p>
+		</header>
+		
+		<main>
+			<div class="row"> <!--images used to open the lightbox-->
+				<div class="column">
+					<img src=".\Images\Timbers\PORGreenandGold.png" alt="Timbers Crest" width="200" height="200" onclick="openModal();currentSlide(1)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src=".\Images\Timbers\mls_is_back_champs.jpg" alt="MLS is Back Champions" onclick="openModal();currentSlide(2)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src=".\Images\Timbers\club_stars.jpg" alt="Club Stars" onclick="openModal();currentSlide(3)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src=".\Images\Timbers\dos_diegos.webp" alt="Dos Diegos" onclick="openModal();currentSlide(4)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src=".\Images\Timbers\williamson.png" alt="Williamson" onclick="openModal();currentSlide(5)" class="hover-shadow">
+				</div>
+			</div>
+
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 5</div>
+						<img src=".\Images\Timbers\PORGreenandGold_wide.png" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">2 / 5</div>
+						<img src=".\Images\Timbers\mls_is_back_champs_wide.jpg" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">3 / 5</div>
+						<img src=".\Images\Timbers\club_stars_wide.jpg" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">4 / 5</div>
+						<img src=".\Images\Timbers\dos_diegos_wide.webp" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">5 / 5</div>
+						<img src=".\Images\Timbers\williamson_wide.png" style="width:100%">
+					</div>
+
+					<!--Next/Prev controls-->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<!--Caption text-->
+					<div class="column">
+						<p id="caption"></p>
+					</div>
+
+					<!--Thumbnail image controls-->
+					<div class="column">
+						<img class="demo" src="Images/Timbers/PORGreenandGold.png" onclcick="currentSlide(1)" alt="PTFC Crest">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="Images/Timbers/mls_is_back_champs.jpg" onclcick="currentSlide(2)" alt="Champs">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="Images/Timbers/club_stars.jpg" onclcick="currentSlide(3)" alt="Club Stars">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="Images/Timbers/dos_diegos.webp" onclcick="currentSlide(4)" alt="Dos Diegos">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="Images/Timbers/williamson.png" onclcick="currentSlide(5)" alt="Williamson">
+					</div>
+				</div>
+			</div>
+			
+			<br>
+			<a href="https://www.timbers.com">Portland Timbers</a>
+		</main>
+		
+		<p>Headline from Willamette Week about MLS is Back Champions:</p>
+		
+		<blockquote cite=https://www.wweek.com/sports/2020/08/11/the-portland-timbers-have-won-the-mls-is-back-tournament-beating-analysts-odds/#:~:text=of%20Willamette%20Week.-,The%20Portland%20Timbers%20Have%20Won%20the%20MLS%20Is%20Back%20Tournament,return%20to%20regular%20season%20play.>
+		The Portland Timbers Have Won the MLS Is Back Tournament, Beating Analysts’ Odds. <br>
+		And now, they’re heading back to Providence Park, as the league recently released <br>
+		its plans for a return to regular season play.
+		</blockquote>
+		
+		<p>MLS is Back Finals highlights:</p>
+		<iframe width="727" height="409" src="https://www.youtube.com/embed/Aj0zPgG29r8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+		<footer>
+			<section id="contact">
+			<div class="container">
+				<div class="heading-padding">
+					<h1 class="heading-padding">Join our e-mail list</h1>
+					<div class="reservation">
+						<h2><span>Stay up to date with everything Timbers</span>
+						</h2>
+						<p class="rsvp-text">
+							Please provide us with your basic contact information.              
+						</p>
+						<div class="form-rsvp">
+							<form action="" method="post">
+								<input class="rsvp" type="text" value="" placeholder="First Name">
+								<input class="rsvp" type="text" value="" placeholder="Last Name">
+								<input class="rsvp" type="text" value="" placeholder="Email Address">
+								<input class="rsvp" type="text" value="" placeholder="Phone Number">
+								<div class="submit">
+									<input type="submit" value="Submit">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		</footer>
+		<br>
+		<nav>
+			<a href="one_page_website.html">HOME</a> |
+			<a href=".\Images\Timbers\Timbers_Crest_1.html">Timbers Crest</a> |
+			<a href=".\Videos\Timbers_Video_1.html">MLS Is Back Final Highlights</a>
+		</nav>
+		
+	</body>
+		
+</html>
