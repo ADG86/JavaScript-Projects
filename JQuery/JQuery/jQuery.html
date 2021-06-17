@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	</head>
+	<body>
+	
+		
+
+	</body>
+<script>
+    $(document).ready(function() {
+        //we are targetting the entire html page with (document). we check if its "ready" and do our function
+        $("html").append(
+            //when the document is ready we target the html element. we then "append" which inserts content onto our html
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+        $("#2").css({"color":"red"});
+        //we are targeting the id "#2" (# refers to id) and effecting it with css to make the color property to a red attribute
+        $("#3").click(function() {
+             //we are targeting the id "#3", then we use a click event, and set up our funtion
+            $('h1').hide();
+            //we are targeting the h1 tag and then we hide it. if we wanted to modify the hide we could put that into the ().
+        });
+    });
+
+    
+
+
+</script>	
+</html>
+

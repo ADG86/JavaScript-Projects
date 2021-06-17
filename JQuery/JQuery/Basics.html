@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	</head>
+	<body>
+	
+		<p id="1">Here is my first paragraph</p>
+        <p id="2">Here is my second paragraph</p>
+        <p id="3">Bring back the second paragraph, please.</p>
+        
+
+	</body>
+<script>
+    // Event setup using a convenience method
+    $( "#1" ).click(function() {
+        console.log("You clicked a paragraph!");
+    });
+
+    // Equivalent event setup using the `.on()` method
+    $( "#2" ).on( "click", function() {
+        console.log("click");
+    });
+
+    $("#2").click(function() { //We are able to create a function that fadesnout our paragraph #2 over 1500 milliseconds
+        $("#2").fadeOut(1500);
+    })
+
+    $("#3").click(function() { //We are able to connect multiple commands to our function
+        $("#2").fadeIn(1500);
+        console.log("Thank You!");
+    })
+
+</script>	
+</html>
