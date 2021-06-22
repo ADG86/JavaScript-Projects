@@ -7,7 +7,8 @@
 
 		
 	</head>
-	<body class="fade-out">
+	<body style="opacity: 0; transition: opacity 3s" onload="document.body.style.opacity='1'">
+		<!--the onload event was added to the body tag in lieu of adding additional javascript below-->
 		<script>
 			// document.body.classList.add('fade-out'); <--We had to take this out to make it work
 		</script>
@@ -34,17 +35,19 @@
 		
 		<footer>
 			<p>Sign up for texts to our news letter!</p>
-				<form>
+				<form name="contact_form" action="/action_page.php" onsubmit="return validateForm()" method="post">
 					<label for="fname">First name:</label><br>
 					<input type="text" id="fname" name="fname" placeholder="First"><br>
 					<label for="lname">Last name:</label><br>
 					<input type="text" id="lname" name="lname" placeholder="Last"><br>
-					<label for="number">Phone Number:</label><br>
-					<input type="text" id="lname" name="lname" placeholder="Last"><br>
+					<label for="email">Email:</label><br>
+					<input type="email" id="email" name="email" placeholder="Email"><br>
+					<label for="age">Age:</label><br>
+					<input type="number" id="age" name="age" placeholder="Age"><br>
 					<input type="submit" value="Submit">
 				</form> 
 		</footer>
-		
+		<br>
 		<nav>
 			<a href="PTFC.html">HOME</a> |
 			<a href=".\Images\Timbers\Timbers_Crest.html">Timbers Crest</a> |
@@ -59,10 +62,30 @@
 
 	<script>
 
-		window.addEventListener('DOMContentLoaded', () => {
-			document.body.classList.remove('fade-out');
-		});
+		
 
+		function validateForm() { //for a form with multiple fields, there is a need for multiple variables to be defined
+			var fn = document.forms["contact_form"]["fname"].value;
+			var ln = document.forms["contact_form"]["lname"].value;
+			var em = document.forms["contact_form"]["email"].value;
+			var ag = document.forms["contact_form"]["age"].value;
+			if (fn == "") { //having multiple "if" statements is needed to verify each part of the form with the function
+				alert("First name must be filled out");
+				return false;
+			}
+			if (ln == "") {
+				alert("Last name must be filled out");
+				return false;
+			}
+			if (em == "") {
+				alert("Email must be filled out");
+				return false;
+			}
+			if (ag == "") {
+				alert("Age name must be filled out");
+				return false;
+			}
+		}
 	</script>
 		
 </html>
