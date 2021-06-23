@@ -38,3 +38,7 @@ li {
     border: 1px solid black;
     padding: 2px;
 }
+
+.remove {
+    padding-bottom: 5px;
+}

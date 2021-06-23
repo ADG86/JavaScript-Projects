@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+        <p id="demo"></p>
+
+        <p id="demo2"></p>
+
+        <p id="living"></p>
+
+        <p id="storage"></p>
+
+        <p id="storage2"></p>
+
+        <p ondblclick="dblClick()">Double-click this paragraph...</p>
+
+        <p id="2click"></p>
+        
+        <script>
+
+            var obj = {"name":"Duncan", "age":34, "city":"Portland"};
+            // stringify will take our key onjects and string values and converted them into strong formats for web browser to read
+            var myJSON = JSON.stringify(obj); 
+            document.getElementById("demo").innerHTML = myJSON;
+            
+
+            //this is one example to parse the string into an object
+            var obj = JSON.parse('{"name2":"Duncan", "age2":34, "city2":"Portland"}');
+
+            document.getElementById("demo2").innerHTML = obj.name2;
+
+            //here is another example of parsing into a string
+
+            var duncan = '{"fname":"Duncan", "ccity":"Portland"}';
+
+            var JSONstring = JSON.parse(duncan);
+            document.getElementById("living").innerHTML = JSONstring.fname + " currently lives in " + JSONstring.ccity;
+
+
+            //How to store data as a key/value pair to be saved locally in the browser
+            localStorage.setItem("AGE", 34);
+            //then use the key "AGE" to return its value
+            document.getElementById("storage").innerHTML = localStorage.getItem("AGE");
+
+            //Another example of storage
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("fcolor", "Blue");
+                document.getElementById("storage2").innerHTML = localStorage.getItem("fcolor");
+            }
+            else {
+                document.getElementById("storage2").innerHTML = "Not supported by web browser";
+            }
+
+
+            //Double click function example
+            function dblClick() {
+                document.getElementById("2click").innerHTML = "to get this text"
+            }
+
+        </script>
+
+    </body>
+</html>

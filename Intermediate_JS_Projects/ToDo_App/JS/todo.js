@@ -15,7 +15,7 @@ function get_todos() {
 /*this function adds the inputed task to the get_todos function array*/
 function add() {
     /*this takes the inputed task and creates a variable of it*/
-    var task = document.getElementById('task').nodeValue;
+    var task = document.getElementById('task').value;
 
     var todos = get_todos();
     /*this adds a new task to the end of the array*/
@@ -23,6 +23,16 @@ function add() {
     /*this converts the task input to a JSON string*/
     localStorage.setItem('todo', JSON.stringify(todos));
     document.getElementById("task").value = "";
+    show();
+
+    return false;
+}
+
+function remove() {
+    var id = this.getAttribute('id');
+    var todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
     show();
 
     return false;
@@ -45,6 +55,11 @@ function show() {
     /*this displays the task as a list*/
     document.getElementById('todos').innerHTML = html;
 
+    /*this tells the browser how to display the todo array after an idem has been removed*/
+    var buttons = document.getElementsByClassName('remove');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+    };
 }
 
 /*this displays the inputed task when the 'Add Item' button is clicked*/
